@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Penilaian Prestasi Mahasiswa</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Penilaian Prestasi Mahasiswa</h1>
+
+    <section>
+      <h2>Form Input</h2>
+
+      <hr color="#005fa3" />
+      <br />
+
+      <form id="formMahasiswa">
+        <div class="input-wrapper">
+          <label for="nama">Nama</label>
+          <input type="text" id="nama" required />
+        </div>
+        <div class="input-wrapper">
+          <label for="nim">Nim</label>
+          <input type="text" id="nim" required />
+        </div>
+        <div class="input-wrapper">
+          <label for="ipk">IPK (0-4)</label>
+          <input type="number" step="0.01" min="0" max="4" id="ipk" required />
+        </div>
+        <div class="input-wrapper">
+          <label for="aktif">Keaktifan (0-10)</label>
+          <input type="number" step="0.01" min="0" max="100" id="aktif" required />
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Fuzzy Set</h2>
+
+      <hr color="#005fa3" />
+
+      <p><b>Variabel Input:</b></p>
+      <ul>
+        <li>IPK (0–4): Rendah, Sedang, Tinggi</li>
+        <li>Keaktifan (0–100): Rendah, Sedang, Tinggi</li>
+        <li>Output: Prestasi (0–100): Rendah, Sedang, Tinggi</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Fuzzy Rules</h2>
+
+      <hr color="#005fa3" />
+
+      <table>
+        <tr>
+          <th>IPK</th>
+          <th>Keaktifan</th>
+          <th>Prestasi</th>
+        </tr>
+        <tr>
+          <td>Tinggi</td>
+          <td>Tinggi</td>
+          <td>Tinggi</td>
+        </tr>
+        <tr>
+          <td>Tinggi</td>
+          <td>Sedang</td>
+          <td>Tinggi</td>
+        </tr>
+        <tr>
+          <td>Tinggi</td>
+          <td>Rendah</td>
+          <td>Sedang</td>
+        </tr>
+        <tr>
+          <td>Sedang</td>
+          <td>Tinggi</td>
+          <td>Tinggi</td>
+        </tr>
+        <tr>
+          <td>Sedang</td>
+          <td>Sedang</td>
+          <td>Sedang</td>
+        </tr>
+        <tr>
+          <td>Sedang</td>
+          <td>Rendah</td>
+          <td>Rendah</td>
+        </tr>
+        <tr>
+          <td>Rendah</td>
+          <td>Tinggi</td>
+          <td>Sedang</td>
+        </tr>
+        <tr>
+          <td>Rendah</td>
+          <td>Sedang</td>
+          <td>Rendah</td>
+        </tr>
+        <tr>
+          <td>Rendah</td>
+          <td>Rendah</td>
+          <td>Rendah</td>
+        </tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>Hasil Perhitungan Fuzzy</h2>
+
+      <hr color="#005fa3" />
+
+      <table id="hasilTable">
+        <thead>
+          <tr>
+            <th>Nama</th>
+            <th>NIM</th>
+            <th>IPK</th>
+            <th>Keaktifan</th>
+            <th>Nilai Fuzzy</th>
+            <th>Kategori Prestasi</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+body {
+  background-color: #1f1f1f;
+  color: #f1f1f1;
+  margin: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+section {
+  background-color: #2f2f2f;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 15px 0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10px;
+}
+th,
+td {
+  border: 1px solid #4f4f4f;
+  padding: 8px;
+  text-align: center;
+}
+th {
+  background-color: #005fa3;
+}
+
+#formMahasiswa {
+  display: flex;
+  gap: 20px;
+}
+
+#formMahasiswa .input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#formMahasiswa input {
+  min-width: 150px;
+  height: 20px;
+}
+
+#formMahasiswa button {
+  background-color: #0798ff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #f1f1f1;
+}
